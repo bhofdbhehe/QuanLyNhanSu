@@ -1,0 +1,27 @@
+﻿CREATE DATABASE QuanLyNhanSu;
+GO
+
+USE QuanLyNhanSu;
+GO
+CREATE TABLE NhanVien (
+    MaNV INT IDENTITY(1,1) PRIMARY KEY,
+    TenNV NVARCHAR(100),
+    ChucVu NVARCHAR(100),
+    Luong DECIMAL(18, 2),
+    MaPB VARCHAR(10)
+);
+GO
+
+CREATE TABLE TaiKhoan (
+    Username VARCHAR(50) PRIMARY KEY,
+    Password VARCHAR(50) NOT NULL
+);
+GO
+
+INSERT INTO TaiKhoan (Username, Password) 
+VALUES ('admin', '060707');
+GO
+CREATE TABLE PhongBan (
+    MaPB VARCHAR(10) PRIMARY KEY,
+    TenPB NVARCHAR(100)
+);
